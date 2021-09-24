@@ -13,7 +13,7 @@ public class Student {
     public Student(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.age = age1;
     }
 
     public String getFirstName() {

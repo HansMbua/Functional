@@ -73,7 +73,7 @@ public class Main {
        studentList = Arrays.asList(studentCLass);
         System.out.println("complete emplyee List");
         studentList.stream().forEach(System.out::println);
-        Predicate<Student> studentPredicate = (student -> student.getAge() >= 1);
+        Predicate<Student> studentPredicate = (student -> student.getSalary() >= 1);
         System.out.println("<---- filtter according to age ----->");
         studentList.stream().filter(studentPredicate).forEach(System.out::println);
 

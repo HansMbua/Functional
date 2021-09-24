@@ -5,7 +5,8 @@ import java.text.Format;
 public class Student {
     private String firstName;
     private String lastName;
-    private int age;
+    private double salary;
+    private String Department;
 
     public Student() {
     }
@@ -13,7 +14,7 @@ public class Student {
     public Student(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+
     }
 
     public String getFirstName() {
@@ -32,23 +33,29 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
     public String getName(){
         return String.format("%s %s",getFirstName(),getLastName());
     }
 
     @Override
     public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
-                '}';
+        return String.format("%-8s %-8s %8.2f %s",getFirstName(), getLastName(), getSalary(), getDepartment());
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
     }
 }
